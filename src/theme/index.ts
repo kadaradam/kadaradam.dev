@@ -41,6 +41,29 @@ const createMuiTheme = ({ mode }: createMuiThemeProps) =>
 					},
 				},
 			},
+			MuiList: {
+				styleOverrides: {
+					root: {
+						'& .MuiListItemButton-root.Mui-selected': {
+							backgroundColor: 'rgba(144, 202, 249, 0.16)',
+						},
+					},
+				},
+			},
+			MuiListItem: {
+				styleOverrides: {
+					root: ({ theme }) => ({
+						'& a': {
+							color: theme.palette.secondary.main,
+							textDecoration: 'none',
+						},
+						'& a:hover': {
+							color: theme.palette.azure.main,
+						},
+					}),
+				},
+			},
+
 			MuiAppBar: {
 				styleOverrides: {
 					root: ({ ownerState, theme }) => ({

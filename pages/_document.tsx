@@ -21,7 +21,7 @@ function withTheme<T extends WithThemeProps = WithThemeProps>(
 		const themeProps = useTheme();
 
 		// props comes afterwards so the can override the default ones.
-		return <WrappedComponent {...themeProps} {...(props as T)} />;
+		return <WrappedComponent {...(props as T)} theme={themeProps} />;
 	};
 
 	ComponentWithTheme.displayName = `withTheme(${displayName})`;

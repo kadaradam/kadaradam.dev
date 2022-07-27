@@ -23,8 +23,8 @@ const WaveAnimatedEmoji = ({ children }: AnimatedWaveProps) => {
 				animation-iteration-count: infinite;
 				transform-origin: 70% 70%;
 				display: inline-block;
-				padding-left: ${theme.spacing(1)};
-				padding-right: ${theme.spacing(1)};
+				padding-left: ${theme.spacing(0.5)};
+				padding-right: ${theme.spacing(0.5)};
 			`}
 		>
 			{children}

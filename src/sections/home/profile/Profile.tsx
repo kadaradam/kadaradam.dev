@@ -9,10 +9,12 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import WorkIcon from '@mui/icons-material/Work';
 import { Box, Button, Divider, Tooltip } from '@mui/material';
 import Link from 'next/link';
+import profilePic from '../../../../public/me.jpeg';
 import WaveAnimatedEmoji from '../../../components/WaveAnimatedEmoji';
 
+import Image from 'next/image';
+
 const profileProps = {
-	avatar_url: 'https://avatars.githubusercontent.com/u/6311130?v=4',
 	full_name: 'Adam Kadar',
 	role: 'Full Stack Developer',
 	linkedin_url: 'https://www.linkedin.com/in/kadaradam/',
@@ -30,8 +32,8 @@ const profileProps = {
 export const Profile = () => (
 	<>
 		<Box>
-			<img
-				src={profileProps.avatar_url}
+			<Image
+				src={profilePic}
 				css={css`
 					width: 100%;
 					height: 100%;

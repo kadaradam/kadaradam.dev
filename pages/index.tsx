@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Toolbar from '../src//components/Toolbar';
 import Navigation from '../src/components/Navigation';
+import WaveAnimatedEmoji from '../src/components/WaveAnimatedEmoji';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -26,7 +27,9 @@ const Home: NextPage = () => {
 							md={3}
 							sx={{ mt: { xs: 0, md: -5 }, px: 2, pt: { xs: 5, md: 0 } }}
 						></Grid>
-						<Grid item sm={12} md={9} sx={{ pt: 2, px: 2 }}></Grid>
+						<Grid item sm={12} md={9} sx={{ pt: 2, px: 2 }}>
+							<WaveAnimatedEmoji>👋</WaveAnimatedEmoji>
+						</Grid>
 					</Grid>
 				</Container>
 			</main>

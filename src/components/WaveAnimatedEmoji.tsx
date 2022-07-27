@@ -1,5 +1,4 @@
 import { css, keyframes } from '@emotion/react';
-
 interface AnimatedWaveProps {
 	children: React.ReactNode;
 }
@@ -18,12 +17,14 @@ const waveEffect = keyframes`
 const WaveAnimatedEmoji = ({ children }: AnimatedWaveProps) => {
 	return (
 		<span
-			css={css`
+			css={(theme) => css`
 				animation-name: ${waveEffect};
 				animation-duration: 2.5s;
 				animation-iteration-count: infinite;
 				transform-origin: 70% 70%;
 				display: inline-block;
+				padding-left: ${theme.spacing(1)};
+				padding-right: ${theme.spacing(1)};
 			`}
 		>
 			{children}

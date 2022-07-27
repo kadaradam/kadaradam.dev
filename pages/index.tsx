@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Toolbar from '../src//components/Toolbar';
 import Navigation from '../src/components/Navigation';
 import WaveAnimatedEmoji from '../src/components/WaveAnimatedEmoji';
+import { Profile } from '../src/sections/home';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -26,7 +27,9 @@ const Home: NextPage = () => {
 							sm={12}
 							md={3}
 							sx={{ mt: { xs: 0, md: -5 }, px: 2, pt: { xs: 5, md: 0 } }}
-						></Grid>
+						>
+							<Profile />
+						</Grid>
 						<Grid item sm={12} md={9} sx={{ pt: 2, px: 2 }}>
 							<WaveAnimatedEmoji>👋</WaveAnimatedEmoji>
 						</Grid>

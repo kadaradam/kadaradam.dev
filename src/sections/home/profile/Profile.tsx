@@ -43,6 +43,7 @@ export const Profile = () => (
 					border: 1px solid #30363d;
 				`}
 				alt="Avatar"
+				priority
 			/>
 
 			<div

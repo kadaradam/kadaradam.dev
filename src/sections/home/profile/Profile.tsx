@@ -1,3 +1,4 @@
+import WaveAnimatedEmoji from '@components/WaveAnimatedEmoji';
 import { css } from '@emotion/react';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import BusinessIcon from '@mui/icons-material/Business';
@@ -8,11 +9,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import WorkIcon from '@mui/icons-material/Work';
 import { Box, Button, Divider, Tooltip } from '@mui/material';
-import Link from 'next/link';
-import profilePic from '../../../../public/me.jpeg';
-import WaveAnimatedEmoji from '../../../components/WaveAnimatedEmoji';
-
+import { styled } from '@mui/system';
 import Image from 'next/image';
+import Link from 'next/link';
+import profilePic from 'public/me.jpeg';
 
 const profileProps = {
 	full_name: 'Adam Kadar',
@@ -50,24 +50,7 @@ export const Profile = () => (
 				id="ignore-avatar-badge"
 			>
 				<Tooltip title="Hey there!" placement="bottom">
-					<div
-						css={(theme) => css`
-							position: absolute;
-							bottom: 0;
-							left: 100%;
-							width: 42px;
-							height: 42px;
-							margin-bottom: 32px;
-							margin-left: -48px;
-							border-radius: 50%;
-							border: 1px solid #30363d;
-							background-color: ${theme.palette.background.default};
-							text-align: center;
-							padding-top: 6px;
-						`}
-					>
-						🎉
-					</div>
+					<AvatarBadge>🎉</AvatarBadge>
 				</Tooltip>
 			</div>
 		</Box>
@@ -176,3 +159,18 @@ const IconWithTextItem = ({ icon, label, href }: IconWithTextItemProps) => {
 		</Box>
 	);
 };
+
+const AvatarBadge = styled('div')(({ theme }) => ({
+	position: 'absolute',
+	bottom: 0,
+	left: '100%',
+	width: '42px',
+	height: '42px',
+	marginBottom: '32px',
+	marginLeft: '-48px',
+	borderRadius: '50%',
+	border: '1px solid #30363d',
+	backgroundColor: theme.palette.background.default,
+	textAlign: 'center',
+	paddingTop: '6px',
+}));

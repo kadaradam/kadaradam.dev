@@ -13,6 +13,8 @@ import { styled } from '@mui/system';
 import Image from 'next/image';
 import Link from 'next/link';
 import profilePic from 'public/me.jpeg';
+//@ts-ignore
+import Slide from 'react-reveal/Slide';
 
 const profileProps = {
 	full_name: 'Adam Kadar',
@@ -30,7 +32,7 @@ const profileProps = {
 };
 
 export const Profile = () => (
-	<>
+	<Slide left>
 		<Box>
 			<Image
 				src={profilePic}
@@ -114,7 +116,7 @@ export const Profile = () => (
 			/>
 		</Box>
 		<Divider />
-	</>
+	</Slide>
 );
 
 type IconWithTextItemProps = {

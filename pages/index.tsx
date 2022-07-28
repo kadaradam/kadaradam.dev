@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Toolbar from '../src//components/Toolbar';
 import Navigation from '../src/components/Navigation';
-import { Experience, Profile } from '../src/sections/home';
+import { Education, Experience, Profile } from '../src/sections/home';
 
 const Home: NextPage = () => {
 	return (
@@ -29,6 +29,7 @@ const Home: NextPage = () => {
 						</Grid>
 						<Grid item sm={12} md={9} sx={{ pt: 2, px: 2 }}>
 							<Experience />
+							<Education />
 						</Grid>
 					</Grid>
 				</Container>

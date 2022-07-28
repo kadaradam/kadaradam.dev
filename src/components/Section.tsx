@@ -1,6 +1,5 @@
 import { Box, Typography } from '@mui/material';
-//@ts-ignore
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 
 interface SectionProps {
 	title: string;
@@ -9,7 +8,7 @@ interface SectionProps {
 
 const Section = ({ title, children }: SectionProps) => {
 	return (
-		<Fade bottom>
+		<Fade triggerOnce cascade duration={1000}>
 			<Box sx={{ width: '100%', paddingBottom: 3 }} id={title.toLowerCase()}>
 				<>
 					<Typography variant="h6" gutterBottom>

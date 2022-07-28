@@ -13,8 +13,7 @@ import { styled } from '@mui/system';
 import Image from 'next/image';
 import Link from 'next/link';
 import profilePic from 'public/me.jpeg';
-//@ts-ignore
-import Slide from 'react-reveal/Slide';
+import { Slide } from 'react-awesome-reveal';
 
 const profileProps = {
 	full_name: 'Adam Kadar',
@@ -32,7 +31,7 @@ const profileProps = {
 };
 
 export const Profile = () => (
-	<Slide left>
+	<Slide triggerOnce>
 		<Box>
 			<Image
 				src={profilePic}

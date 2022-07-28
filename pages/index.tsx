@@ -1,12 +1,9 @@
 import { Container, Grid } from '@mui/material';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import Toolbar from '../src//components/Toolbar';
 import Navigation from '../src/components/Navigation';
-import WaveAnimatedEmoji from '../src/components/WaveAnimatedEmoji';
-import { Profile } from '../src/sections/home';
-import styles from '../styles/Home.module.css';
+import { Experience, Profile } from '../src/sections/home';
 
 const Home: NextPage = () => {
 	return (
@@ -31,24 +28,11 @@ const Home: NextPage = () => {
 							<Profile />
 						</Grid>
 						<Grid item sm={12} md={9} sx={{ pt: 2, px: 2 }}>
-							<WaveAnimatedEmoji>👋</WaveAnimatedEmoji>
+							<Experience />
 						</Grid>
 					</Grid>
 				</Container>
 			</main>
-
-			<footer className={styles.footer}>
-				<a
-					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Powered by{' '}
-					<span className={styles.logo}>
-						<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-					</span>
-				</a>
-			</footer>
 		</div>
 	);
 };

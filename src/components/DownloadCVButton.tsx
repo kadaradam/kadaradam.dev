@@ -23,7 +23,12 @@ const DownloadCVButton = () => {
 				onMouseEnter={() => setShowTooltip(true)}
 				onMouseLeave={() => setShowTooltip(false)}
 			>
-				<IconButton onClick={handleClick} aria-label="generate-pdf" sx={{ color: 'white' }}>
+				<IconButton
+					/* onClick={handleClick} */
+					href="/cv-adam-kadar.pdf"
+					aria-label="generate-pdf"
+					sx={{ color: 'white' }}
+				>
 					<SaveAltIcon sx={{ fontSize: 20 }} />
 				</IconButton>
 			</Tooltip>

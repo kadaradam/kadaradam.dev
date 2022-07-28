@@ -3,7 +3,7 @@ import Toolbar from '@components/Toolbar';
 import { Container, Grid } from '@mui/material';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Education, Experience, Language, Profile, Skills } from 'src/sections/home';
+import { Education, Experience, Hobbies, Language, Profile, Skills } from 'src/sections/home';
 
 const Home: NextPage = () => {
 	return (
@@ -32,6 +32,7 @@ const Home: NextPage = () => {
 							<Education />
 							<Skills />
 							<Language />
+							<Hobbies />
 						</Grid>
 					</Grid>
 				</Container>

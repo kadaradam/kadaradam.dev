@@ -1,6 +1,7 @@
 import { AppBar, Box, Toolbar as ToolbarMui } from '@mui/material';
 import DownloadCVButton from './DownloadCVButton';
 import { NotificationsButton } from './NotificationsButton';
+import ToggleThemeButton from './ToggleThemeButton';
 
 const Toolbar = () => (
 	<AppBar position="static" color="default">
@@ -10,6 +11,7 @@ const Toolbar = () => (
 				<Box>
 					<DownloadCVButton />
 					<NotificationsButton />
+					<ToggleThemeButton />
 				</Box>
 			</Box>
 		</ToolbarMui>

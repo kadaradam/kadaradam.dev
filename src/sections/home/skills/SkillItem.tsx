@@ -11,7 +11,14 @@ interface ExperienceItemProps {
 const SkillItem = ({ item }: ExperienceItemProps) => (
 	<Card variant="outlined">
 		<Box sx={{ my: 'auto' }}>
-			<Image src={item.img} alt={item.name} />
+			<Image
+				src={item.img}
+				alt={item.name}
+				width="60"
+				height="60"
+				layout="fixed"
+				objectFit="contain"
+			/>
 		</Box>
 		<Box sx={{ typography: 'body1', fontWeight: 'bold', marginTop: 'auto' }}>{item.name}</Box>
 	</Card>

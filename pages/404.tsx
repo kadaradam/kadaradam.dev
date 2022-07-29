@@ -13,11 +13,11 @@ const PageNotFound = () => (
 		</Box>
 	</Container>
 );
-const Container = styled(MuiContainer)(({ theme }) => ({
+const Container = styled(MuiContainer)({
 	position: 'absolute',
 	left: '50%',
 	top: '50%',
 	transform: 'translate(-50%, -50%)',
-}));
+});
 
 export default PageNotFound;

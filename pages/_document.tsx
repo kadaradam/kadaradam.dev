@@ -1,66 +1,50 @@
+import { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import createEmotionServer from '@emotion/server/create-instance';
-import { Theme } from '@mui/material';
-import Document, { Head, Html, Main, NextScript } from 'next/document';
-import React from 'react';
+import Document, {
+	DocumentContext,
+	DocumentInitialProps,
+	Head,
+	Html,
+	Main,
+	NextScript,
+} from 'next/document';
+import useTheme from 'src/hooks/useTheme';
 import createEmotionCache from '../src/createEmotionCache';
-import useTheme from '../src/hooks/useTheme';
 
-interface WithThemeProps {
-	theme: Theme;
+interface DocumentProps extends DocumentInitialProps {
+	emotionStyleTags: EmotionJSX.Element[];
 }
 
-function withTheme<T extends WithThemeProps = WithThemeProps>(
-	WrappedComponent: React.ComponentType<T>
-) {
-	// Try to create a nice displayName for React Dev Tools.
-	const displayName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
+const MyDocument = ({ emotionStyleTags }: DocumentProps) => {
+	const theme = useTheme();
 
-	// Creating the inner component. The calculated Props type here is the where the magic happens.
-	const ComponentWithTheme = (props: Omit<T, keyof WithThemeProps>) => {
-		// Fetch the props you want to inject. This could be done with context instead.
-		const themeProps = useTheme();
-
-		// props comes afterwards so the can override the default ones.
-		return <WrappedComponent {...(props as T)} theme={themeProps} />;
-	};
-
-	ComponentWithTheme.displayName = `withTheme(${displayName})`;
-
-	return ComponentWithTheme;
-}
-
-class MyDocument extends Document<WithThemeProps> {
-	render() {
-		const theme = this.props.theme;
-
-		return (
-			<Html lang="en">
-				<Head>
-					{/* PWA primary color */}
-					<meta name="theme-color" content={theme.palette.primary.main} />
-					<link rel="shortcut icon" href="./favicon.ico" />
-					<link rel="manifest" href="./manifest.json" />
-					<link rel="canonical" href="https://kadaradam.dev" />
-					<link rel="apple-touch-icon" href="./logo192.png" />
-					<link
-						rel="stylesheet"
-						href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-					/>
-					<meta name="emotion-insertion-point" content="" />
-					{(this.props as any).emotionStyleTags}
-				</Head>
-				<body>
-					<Main />
-					<NextScript />
-				</body>
-			</Html>
-		);
-	}
-}
+	return (
+		<Html lang="en">
+			<Head>
+				{/* PWA primary color */}
+				<meta name="theme-color" content={theme.palette.primary.main} />
+				<link rel="shortcut icon" href="./favicon.ico" />
+				<link rel="manifest" href="./manifest.json" />
+				<link rel="canonical" href="https://kadaradam.dev" />
+				<link rel="apple-touch-icon" href="./logo192.png" />
+				<link
+					rel="stylesheet"
+					href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+				/>
+				<meta name="emotion-insertion-point" content="" />
+				{emotionStyleTags}
+			</Head>
+			<body>
+				<Main />
+				<NextScript />
+			</body>
+		</Html>
+	);
+};
 
 // `getInitialProps` belongs to `_document` (instead of `_app`),
 // it's compatible with static-site generation (SSG).
-MyDocument.getInitialProps = async (ctx) => {
+MyDocument.getInitialProps = async (ctx: DocumentContext) => {
 	// Resolution order
 	//
 	// On the server:
@@ -117,4 +101,4 @@ MyDocument.getInitialProps = async (ctx) => {
 	};
 };
 
-export default withTheme(MyDocument);
+export default MyDocument;

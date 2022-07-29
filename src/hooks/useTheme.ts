@@ -1,17 +1,21 @@
-import { Theme } from "@mui/material";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useMemo } from "react";
-import createMuiTheme from "../theme";
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useMemo } from 'react';
+import { useAppContext } from 'src/AppContext';
+import createMuiTheme from '../theme';
 
 function useTheme() {
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+	const { theme: currentTheme } = useAppContext();
+	const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
-  const theme = useMemo(
-    (): Theme => createMuiTheme({ mode: prefersDarkMode ? "dark" : "light" }),
-    [prefersDarkMode]
-  );
+	const theme = useMemo(() => {
+		if (currentTheme === 'system') {
+			return createMuiTheme({ mode: prefersDarkMode ? 'dark' : 'light' });
+		}
 
-  return theme;
+		return createMuiTheme({ mode: currentTheme === 'light' ? 'light' : 'dark' });
+	}, [currentTheme, prefersDarkMode]);
+
+	return theme;
 }
 
 export default useTheme;

@@ -3,6 +3,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import React from 'react';
+import { AppContextProvider } from 'src/AppContext';
 import createEmotionCache from '../src/createEmotionCache';
 import useTheme from '../src/hooks/useTheme';
 
@@ -13,20 +15,31 @@ interface MyAppProps extends AppProps {
 	emotionCache?: EmotionCache;
 }
 
-export default function MyApp(props: MyAppProps) {
-	const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-	const theme = useTheme();
-
+export default function MyApp({
+	Component,
+	emotionCache = clientSideEmotionCache,
+	pageProps,
+}: MyAppProps) {
 	return (
 		<CacheProvider value={emotionCache}>
 			<Head>
 				<meta name="viewport" content="initial-scale=1, width=device-width" />
 			</Head>
-			<ThemeProvider theme={theme}>
-				{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-				<CssBaseline />
-				<Component {...pageProps} />
-			</ThemeProvider>
+			<AppContextProvider>
+				<CustomThemeProvider>
+					{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+					<CssBaseline />
+					<Component {...pageProps} />
+				</CustomThemeProvider>
+			</AppContextProvider>
 		</CacheProvider>
 	);
+}
+
+type CustomThemeProviderProps = { children: React.ReactNode };
+
+function CustomThemeProvider({ children }: CustomThemeProviderProps) {
+	const theme = useTheme();
+
+	return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }

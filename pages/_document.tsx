@@ -18,6 +18,8 @@ interface DocumentProps extends DocumentInitialProps {
 const MyDocument = ({ emotionStyleTags }: DocumentProps) => {
 	const theme = useTheme();
 
+	const googleAnaliticsApiKey = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY;
+
 	return (
 		<Html lang="en">
 			<Head>
@@ -30,6 +32,24 @@ const MyDocument = ({ emotionStyleTags }: DocumentProps) => {
 				<link
 					rel="stylesheet"
 					href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+				/>
+				{/* <!-- Global site tag (gtag.js) - Google Analytics -->*/}
+				<script
+					async
+					src={`https://www.googletagmanager.com/gtag/js?id=${googleAnaliticsApiKey}`}
+				/>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+							window.dataLayer = window.dataLayer || [];
+							function gtag() {
+								dataLayer.push(arguments);
+							}
+							gtag('js', new Date());
+
+							gtag('config', '${googleAnaliticsApiKey}');
+						`,
+					}}
 				/>
 				<meta name="emotion-insertion-point" content="" />
 				{emotionStyleTags}

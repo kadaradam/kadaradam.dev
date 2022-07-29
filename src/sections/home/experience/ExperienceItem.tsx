@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 import { Avatar, Box, Card as MuiCard, CardContent, Chip, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 import moment from 'moment';

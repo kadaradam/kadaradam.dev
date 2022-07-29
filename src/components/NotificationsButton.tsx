@@ -11,16 +11,12 @@ import {
 	Popover,
 } from '@mui/material';
 import { useEffect, useState } from 'react';
+import Markdown from 'react-markdown';
 
 const NOTIFICATION_LIST = [
 	{
 		_id: 'notif-0',
-		text: (
-			<>
-				I'm open to part-time opportunities.{' '}
-				<a href="mailto:contact@kadaradam.dev"> Contact me here.</a>
-			</>
-		),
+		text: "I'm open to part-time opportunities. [Contact me here](mailto:contact@kadaradam.dev).",
 		viewed: false,
 	},
 ];
@@ -90,7 +86,12 @@ export const NotificationsButton = () => {
 										/>
 									</ListItemIcon>
 								)}
-								<ListItemText primary={item.text} />
+								<ListItemText
+									primary={
+										// eslint-disable-next-line react/no-children-prop
+										<Markdown components={{ p: 'span' }} children={item.text} />
+									}
+								/>
 							</ListItemButton>
 						</ListItem>
 					))}

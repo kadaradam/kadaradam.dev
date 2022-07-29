@@ -75,9 +75,10 @@ export const Profile = () => (
 			Connect
 		</Button>
 		<Box sx={{ pt: 3 }}>
-			Hi! <WaveAnimatedEmoji>👋</WaveAnimatedEmoji> My name is Adam. I'm a self-taught full
-			stack developer in Budapest, with a passion for web and mobile application development.
-			I love learning new skills and constantly improving my habits through self-development.
+			Hi! <WaveAnimatedEmoji>👋</WaveAnimatedEmoji> My name is Adam. I&apos;m a self-taught
+			full stack developer in Budapest, with a passion for web and mobile application
+			development. I love learning new skills and constantly improving my habits through
+			self-development.
 		</Box>
 		<Box sx={{ py: 2 }}>
 			<IconWithTextItem

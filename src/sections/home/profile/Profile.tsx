@@ -31,6 +31,8 @@ const profileProps = {
 };
 
 export const Profile = () => (
+	// Fix Emotion TS error issue:  Property 'children' does not exist on type SlideProps.
+	// @ts-ignore
 	<Slide triggerOnce>
 		<Box>
 			<Image

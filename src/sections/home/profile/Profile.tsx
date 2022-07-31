@@ -12,7 +12,7 @@ import { Box, Button, Divider, Tooltip } from '@mui/material';
 import { styled } from '@mui/system';
 import Image from 'next/image';
 import Link from 'next/link';
-import profilePic from 'public/me.jpeg';
+import profilePic from 'public/me.png';
 import { Slide } from 'react-awesome-reveal';
 
 const profileProps = {

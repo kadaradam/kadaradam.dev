@@ -8,7 +8,7 @@ const Toolbar = () => (
 		<ToolbarMui variant="dense">
 			<Box width="100%" display="flex" alignItems="center" justifyContent="space-between">
 				<Box display="flex" alignItems="center" />
-				<Box>
+				<Box display="flex" alignItems="center">
 					<DownloadCVButton />
 					<NotificationsButton />
 					<ToggleThemeButton />

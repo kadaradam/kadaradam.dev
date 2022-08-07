@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import chromium from 'chrome-aws-lambda';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import puppeteer from 'puppeteer';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Buffer>) {
 	if (req.method === 'POST') {
@@ -25,7 +25,13 @@ type GeneratePageAsPdArgs = {
 };
 
 async function generatePageAsPdf({ mode }: GeneratePageAsPdArgs): Promise<Buffer> {
-	const browser = await puppeteer.launch({ headless: true });
+	const browser = await chromium.puppeteer.launch({
+		args: [...chromium.args, '--hide-scrollbars', '--disable-web-security'],
+		defaultViewport: chromium.defaultViewport,
+		executablePath: await chromium.executablePath,
+		headless: true,
+		ignoreHTTPSErrors: true,
+	});
 	const page = await browser.newPage();
 	const websiteUrl = process.env.NEXT_WEBSITE_URL;
 

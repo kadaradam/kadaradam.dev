@@ -11,12 +11,10 @@ const Section = ({ title, children }: SectionProps) => (
 	// @ts-ignore
 	<Fade triggerOnce cascade duration={1000}>
 		<Box sx={{ width: '100%', paddingBottom: 3 }} id={title.toLowerCase()}>
-			<>
-				<Typography variant="h6" gutterBottom>
-					{title}
-				</Typography>
-				{children}
-			</>
+			<Typography variant="h6" gutterBottom>
+				{title}
+			</Typography>
+			{children}
 		</Box>
 	</Fade>
 );

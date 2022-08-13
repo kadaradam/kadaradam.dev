@@ -84,6 +84,12 @@ async function generatePageAsPdf({ mode }: GeneratePageAsPdArgs): Promise<Buffer
 			toolbar.parentNode.removeChild(toolbar);
 		}
 
+		const navigation = document.getElementById('navigation');
+
+		if (navigation?.parentNode) {
+			navigation.parentNode.removeChild(navigation);
+		}
+
 		const avatarBadge = document.querySelector('#ignore-avatar-badge');
 
 		if (avatarBadge?.parentNode) {

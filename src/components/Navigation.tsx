@@ -35,6 +35,7 @@ const Navigation = () => {
 					/>
 					<Grid item sm={12} md={9} sx={{ width: '100%', pt: 2, px: { xs: 0, md: 2 } }}>
 						<Tabs
+							id="navigation"
 							value={value}
 							onChange={handleChange}
 							indicatorColor="secondary"

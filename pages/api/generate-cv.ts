@@ -25,6 +25,10 @@ type GeneratePageAsPdArgs = {
 };
 
 async function generatePageAsPdf({ mode }: GeneratePageAsPdArgs): Promise<Buffer> {
+	await chromium.font(
+		'https://raw.githack.com/googlei18n/noto-emoji/master/fonts/NotoColorEmoji.ttf'
+	);
+
 	const browser = await chromium.puppeteer.launch({
 		args: [...chromium.args, '--hide-scrollbars', '--disable-web-security'],
 		defaultViewport: chromium.defaultViewport,

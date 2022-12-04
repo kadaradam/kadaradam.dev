@@ -64,7 +64,7 @@ const EXPERIENCE_LIST: ExperienceType[] = [
 		tags: [
 			'React',
 			'Next.js',
-			'Vue',
+			'Vue.js',
 			'React Native',
 			'NestJS',
 			'Express',

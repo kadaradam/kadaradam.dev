@@ -8,6 +8,7 @@ import HtmlImg from 'public/skills/html.png';
 import JavaScriptImg from 'public/skills/js.png';
 import MongoDBImg from 'public/skills/mongo.png';
 import NestJSImg from 'public/skills/nestjs.png';
+import NextJs from 'public/skills/nextjs.png';
 import NodeJSImg from 'public/skills/node.png';
 import ReactImg from 'public/skills/react.png';
 import SeleniumImg from 'public/skills/selenium.png';
@@ -54,6 +55,11 @@ const SKILL_LIST: SkillType[] = [
 		_id: 'skill-reactnative',
 		name: 'React Native',
 		img: ReactImg,
+	},
+	{
+		_id: 'skill-nextjs',
+		name: 'Next.js',
+		img: NextJs,
 	},
 	{
 		_id: 'skill-gatsby',

@@ -120,7 +120,7 @@ export const Skills = () => {
 	return (
 		<Section title="Skills">
 			<Box display="flex" flexDirection="row" alignItems="center">
-				<Typography variant="body1" sx={{ my: 2 }}>
+				<Typography variant="body1" sx={{ mb: 2 }}>
 					Work
 				</Typography>
 			</Box>

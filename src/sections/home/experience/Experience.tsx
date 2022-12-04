@@ -26,7 +26,7 @@ const EXPERIENCE_LIST: ExperienceType[] = [
 	{
 		_id: 'exp-2',
 		companyName: 'EDMdesigner',
-		role: 'FULL STACK DEVELOPER ',
+		role: 'FULL STACK DEVELOPER',
 		description:
 			'**Chamaileon** - Developed a responsive, real-time **email template builder** with a **drag and drop surface**. **Rest API** and backend maintenance. Built a **Single-Page Application** and **Micro Frontends** for SDK. Contributed to a web **payment system**. Implemented **Amazon Cognito** for user authentication.',
 		startDate: new Date(2018, 9 - 1),
@@ -36,22 +36,41 @@ const EXPERIENCE_LIST: ExperienceType[] = [
 	{
 		_id: 'exp-3',
 		companyName: 'Cargo-Viszed Kft.',
-		role: 'FULL STACK DEVELOPER ',
+		role: 'FULL STACK DEVELOPER',
 		description:
 			'ViddL - Currently contributing to a **Last Mile Delivery Application**. It has a web application to upload manage and assign packages to a courier. Also has **mobile app** to help the couriers to handle the delivery.',
 		startDate: new Date(2021, 6 - 1),
-		endDate: undefined,
+		endDate: new Date(2021, 12 - 1),
 		tags: ['React', 'React Native', 'NestJS', 'MongoDB', 'TypeScript', 'CSS'],
 	},
 	{
 		_id: 'exp-4',
 		companyName: 'Cogito Technologies Kft.',
-		role: 'FULL STACK DEVELOPER ',
+		role: 'FULL STACK DEVELOPER',
 		description:
 			'**Hungarian Startup University Program** - Currently contributing to an **E-learning platform** available for both web and mobile. The program teaches you how to create a business, and how startups and entrepreneurship work. It is available for university students only.',
 		startDate: new Date(2021, 6 - 1),
-		endDate: undefined,
+		endDate: new Date(2021, 8 - 1),
 		tags: ['React', 'React Native', 'NestJS', 'MongoDB', 'TypeScript', 'CSS'],
+	},
+	{
+		_id: 'exp-5',
+		companyName: 'Freelance Software Engineer',
+		role: 'FREELANCER',
+		description:
+			'Freelancer, specialised in **web and mobile application development**. My main responsibilities are: **communicating with clients, architecture planning, building the application**.',
+		startDate: new Date(2021, 12 - 1),
+		endDate: undefined,
+		tags: [
+			'React',
+			'Next.js',
+			'Vue',
+			'React Native',
+			'NestJS',
+			'Express',
+			'MongoDB',
+			'TypeScript',
+		],
 	},
 ];
 

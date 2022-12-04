@@ -41,7 +41,7 @@ const EXPERIENCE_LIST: ExperienceType[] = [
 			'ViddL - Currently contributing to a **Last Mile Delivery Application**. It has a web application to upload manage and assign packages to a courier. Also has **mobile app** to help the couriers to handle the delivery.',
 		startDate: new Date(2021, 6 - 1),
 		endDate: new Date(2021, 12 - 1),
-		tags: ['React', 'React Native', 'NestJS', 'MongoDB', 'TypeScript', 'CSS'],
+		tags: ['React', 'React Native', 'Next.js', 'NestJS', 'MongoDB', 'TypeScript', 'CSS'],
 	},
 	{
 		_id: 'exp-4',

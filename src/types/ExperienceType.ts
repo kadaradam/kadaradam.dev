@@ -1,3 +1,18 @@
+export type ExperienceTagsType =
+	| 'Pawn'
+	| 'CSS'
+	| 'PHP'
+	| 'MySQL'
+	| 'JavaScript'
+	| 'MongoDB'
+	| 'TypeScript'
+	| 'Vue.js'
+	| 'Express'
+	| 'React'
+	| 'NestJS'
+	| 'React Native'
+	| 'Next.js';
+
 export type ExperienceType = {
 	_id: string;
 	companyName: string;
@@ -5,5 +20,5 @@ export type ExperienceType = {
 	role: string;
 	startDate: Date;
 	endDate: Date | undefined;
-	tags: string[];
+	tags: ExperienceTagsType[];
 };

@@ -3,17 +3,17 @@ import { Avatar, Box, Card as MuiCard, CardContent, Chip, Typography } from '@mu
 import { styled } from '@mui/system';
 import moment from 'moment';
 import Markdown from 'react-markdown';
-import { ExperienceType } from '../../../types';
+import { ExperienceTagsType, ExperienceType } from '../../../types';
 
 type ExperienceItemProps = {
 	item: ExperienceType;
 };
 
 type CardBottomSectionProps = {
-	tags: string[];
+	tags: ExperienceTagsType[];
 };
 
-const tagColors: { [key: string]: string } = {
+const tagColors: { [key in ExperienceTagsType]: string } = {
 	JavaScript: '#f1e05a',
 	CSS: '#563d7c',
 	Pawn: '#DBB284',
@@ -26,6 +26,7 @@ const tagColors: { [key: string]: string } = {
 	React: '#61dafb',
 	'React Native': '#6190fb',
 	NestJS: '#ea2845',
+	'Next.js': '#0070f3',
 };
 
 const ExperienceTags = ({ tags }: CardBottomSectionProps) => (

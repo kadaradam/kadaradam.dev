@@ -53,7 +53,7 @@ export const Profile = () => (
 				`}
 				id="ignore-avatar-badge"
 			>
-				<Tooltip title="Hey there!" placement="bottom">
+				<Tooltip title="Hey there! I'm open to work with you. 🥳" placement="bottom">
 					<AvatarBadge>🎉</AvatarBadge>
 				</Tooltip>
 			</div>

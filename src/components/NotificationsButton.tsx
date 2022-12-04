@@ -16,7 +16,7 @@ import Markdown from 'react-markdown';
 const NOTIFICATION_LIST = [
 	{
 		_id: 'notif-0',
-		text: "I'm open to part-time opportunities. [Contact me here](mailto:contact@kadaradam.dev).",
+		text: "I'm only open to freelance, contractor opportunities. [Contact me](mailto:contact@kadaradam.dev).",
 		viewed: false,
 	},
 ];
@@ -69,7 +69,7 @@ export const NotificationsButton = () => {
 					horizontal: 'left',
 				}}
 			>
-				<List>
+				<List sx={{ width: 250 }}>
 					{notifications.map((item, index) => (
 						<ListItem key={item._id} disablePadding>
 							<ListItemButton

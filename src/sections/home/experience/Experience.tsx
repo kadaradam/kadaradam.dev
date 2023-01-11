@@ -40,7 +40,7 @@ const EXPERIENCE_LIST: ExperienceType[] = [
 		description:
 			'ViddL - Currently contributing to a **Last Mile Delivery Application**. It has a web application to upload manage and assign packages to a courier. Also has **mobile app** to help the couriers to handle the delivery.',
 		startDate: new Date(2021, 6 - 1),
-		endDate: new Date(2021, 12 - 1),
+		endDate: new Date(2022, 12 - 1),
 		tags: ['React', 'React Native', 'Next.js', 'NestJS', 'MongoDB', 'TypeScript', 'CSS'],
 	},
 	{
@@ -50,7 +50,7 @@ const EXPERIENCE_LIST: ExperienceType[] = [
 		description:
 			'**Hungarian Startup University Program** - Currently contributing to an **E-learning platform** available for both web and mobile. The program teaches you how to create a business, and how startups and entrepreneurship work. It is available for university students only.',
 		startDate: new Date(2021, 6 - 1),
-		endDate: new Date(2021, 8 - 1),
+		endDate: new Date(2022, 8 - 1),
 		tags: ['React', 'React Native', 'NestJS', 'MongoDB', 'TypeScript', 'CSS'],
 	},
 	{

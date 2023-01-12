@@ -11,7 +11,8 @@ export type ExperienceTagsType =
 	| 'React'
 	| 'NestJS'
 	| 'React Native'
-	| 'Next.js';
+	| 'Next.js'
+	| 'Gatsby';
 
 export type ExperienceType = {
 	_id: string;

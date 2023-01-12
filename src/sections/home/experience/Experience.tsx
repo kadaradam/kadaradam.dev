@@ -38,7 +38,7 @@ const EXPERIENCE_LIST: ExperienceType[] = [
 		companyName: 'Cargo-Viszed Kft.',
 		role: 'FULL STACK DEVELOPER',
 		description:
-			'ViddL - Currently contributing to a **Last Mile Delivery Application**. It has a web application to upload manage and assign packages to a courier. Also has **mobile app** to help the couriers to handle the delivery.',
+			'ViddL - I have contributed to the development of a **Last Mile Delivery Application**. The application includes a web application for uploading, managing, and assigning packages to couriers. It also has a **mobile app** to assist couriers with handling deliveries.',
 		startDate: new Date(2021, 6 - 1),
 		endDate: new Date(2022, 12 - 1),
 		tags: ['React', 'React Native', 'Next.js', 'NestJS', 'MongoDB', 'TypeScript', 'CSS'],
@@ -48,7 +48,7 @@ const EXPERIENCE_LIST: ExperienceType[] = [
 		companyName: 'Cogito Technologies Kft.',
 		role: 'FULL STACK DEVELOPER',
 		description:
-			'**Hungarian Startup University Program** - Currently contributing to an **E-learning platform** available for both web and mobile. The program teaches you how to create a business, and how startups and entrepreneurship work. It is available for university students only.',
+			'**Hungarian Startup University Program** - I have contributed to the development of an **E-learning platform** that is accessible both on web and mobile. The platform provides courses on creating a business, startup principles, and entrepreneurship, and is exclusively available for university students.',
 		startDate: new Date(2021, 6 - 1),
 		endDate: new Date(2022, 8 - 1),
 		tags: ['React', 'React Native', 'NestJS', 'MongoDB', 'TypeScript', 'CSS'],

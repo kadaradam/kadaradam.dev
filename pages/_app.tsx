@@ -1,3 +1,4 @@
+import Toolbar from '@components/Toolbar';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
@@ -23,12 +24,16 @@ export default function MyApp({
 	return (
 		<CacheProvider value={emotionCache}>
 			<Head>
+				<title>Adam Kadar - Full Stack Developer</title>
+				<meta name="description" content="Full Stack Developer Portfolio and CV" />
 				<meta name="viewport" content="initial-scale=1, width=device-width" />
+				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<AppContextProvider>
 				<CustomThemeProvider>
 					{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
 					<CssBaseline />
+					<Toolbar />
 					<Component {...pageProps} />
 				</CustomThemeProvider>
 			</AppContextProvider>

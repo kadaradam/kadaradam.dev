@@ -1,48 +1,14 @@
 /* eslint-disable react/no-children-prop */
-import { Avatar, Box, Card as MuiCard, CardContent, Chip, Typography } from '@mui/material';
+import ExperienceTags from '@components/ExperienceTags';
+import { Box, Card as MuiCard, CardContent, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 import moment from 'moment';
 import Markdown from 'react-markdown';
-import { ExperienceTagsType, ExperienceType } from '../../../types';
+import { ExperienceType } from '../../../types';
 
 type ExperienceItemProps = {
 	item: ExperienceType;
 };
-
-type CardBottomSectionProps = {
-	tags: ExperienceTagsType[];
-};
-
-const tagColors: { [key in ExperienceTagsType]: string } = {
-	JavaScript: '#f1e05a',
-	CSS: '#563d7c',
-	Pawn: '#DBB284',
-	PHP: '#4F5D95',
-	MySQL: '#F29111',
-	TypeScript: '#2b7489',
-	MongoDB: '#3FA037',
-	'Vue.js': '#42b883',
-	Express: '#444',
-	React: '#61dafb',
-	'React Native': '#6190fb',
-	NestJS: '#ea2845',
-	'Next.js': '#0070f3',
-};
-
-const ExperienceTags = ({ tags }: CardBottomSectionProps) => (
-	<Box sx={{ paddingTop: 1, marginTop: 'auto', flexDirection: 'row', flexWrap: 'wrap' }}>
-		{tags.map((tagName) => (
-			<Chip
-				label={tagName}
-				key={tagName}
-				avatar={<Avatar sx={{ bgcolor: tagColors[tagName] }}>{''}</Avatar>}
-				variant="outlined"
-				size="small"
-				sx={{ marginTop: 1, marginRight: 1 }}
-			/>
-		))}
-	</Box>
-);
 
 const ExperienceItem = ({ item }: ExperienceItemProps) => {
 	const formatedDate = `${moment(item.startDate).format('MMMM YYYY')} - ${
@@ -65,7 +31,9 @@ const ExperienceItem = ({ item }: ExperienceItemProps) => {
 					<Markdown components={{ p: 'span' }} children={item.description} />
 				</Typography>
 				{/* Bottom tags */}
-				<ExperienceTags tags={item.tags} />
+				<Box sx={{ marginTop: 'auto' }}>
+					<ExperienceTags tags={item.tags} />
+				</Box>
 			</CardContent>
 		</Card>
 	);

@@ -35,7 +35,7 @@ const DownloadCVButton = () => {
 	};
 
 	return (
-		<Box sx={{ position: 'relative' }}>
+		<Box sx={{ position: 'relative', display: 'inline-block' }}>
 			<Tooltip
 				title="Download my CV"
 				open={showTooltip}

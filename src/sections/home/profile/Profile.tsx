@@ -53,7 +53,7 @@ export const Profile = () => (
 				`}
 				id="ignore-avatar-badge"
 			>
-				<Tooltip title="Hey there!" placement="bottom">
+				<Tooltip title="Hey there! I'm open to work with you. 🥳" placement="bottom">
 					<AvatarBadge>🎉</AvatarBadge>
 				</Tooltip>
 			</div>
@@ -78,9 +78,9 @@ export const Profile = () => (
 		</Button>
 		<Box sx={{ pt: 3 }}>
 			Hi! <WaveAnimatedEmoji>👋</WaveAnimatedEmoji> My name is Adam. I&apos;m a self-taught
-			full stack developer in Budapest, with a passion for web and mobile application
-			development. I love learning new skills and constantly improving my habits through
-			self-development.
+			full stack developer based in Budapest, with a passion for web and mobile application
+			development. I enjoy acquiring new skills and continually bettering myself through
+			self-improvement.
 		</Box>
 		<Box sx={{ py: 2 }}>
 			<IconWithTextItem

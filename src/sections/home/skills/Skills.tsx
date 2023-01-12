@@ -8,6 +8,7 @@ import HtmlImg from 'public/skills/html.png';
 import JavaScriptImg from 'public/skills/js.png';
 import MongoDBImg from 'public/skills/mongo.png';
 import NestJSImg from 'public/skills/nestjs.png';
+import NextJs from 'public/skills/nextjs.png';
 import NodeJSImg from 'public/skills/node.png';
 import ReactImg from 'public/skills/react.png';
 import SeleniumImg from 'public/skills/selenium.png';
@@ -21,29 +22,9 @@ import SkillItem from './SkillItem';
 
 const SKILL_LIST: SkillType[] = [
 	{
-		_id: 'skill-html',
-		name: 'HTML',
-		img: HtmlImg,
-	},
-	{
-		_id: 'skill-css',
-		name: 'CSS',
-		img: CssImg,
-	},
-	{
-		_id: 'skill-js',
-		name: 'JavaScript',
-		img: JavaScriptImg,
-	},
-	{
 		_id: 'skill-ts',
 		name: 'TypeScript',
 		img: TypeScriptImg,
-	},
-	{
-		_id: 'skill-vue',
-		name: 'Vue',
-		img: VueImg,
 	},
 	{
 		_id: 'skill-react',
@@ -51,9 +32,19 @@ const SKILL_LIST: SkillType[] = [
 		img: ReactImg,
 	},
 	{
+		_id: 'skill-nextjs',
+		name: 'Next.js',
+		img: NextJs,
+	},
+	{
 		_id: 'skill-reactnative',
 		name: 'React Native',
 		img: ReactImg,
+	},
+	{
+		_id: 'skill-vue',
+		name: 'Vue',
+		img: VueImg,
 	},
 	{
 		_id: 'skill-gatsby',
@@ -76,14 +67,29 @@ const SKILL_LIST: SkillType[] = [
 		img: MongoDBImg,
 	},
 	{
-		_id: 'skill-git',
-		name: 'Git',
-		img: GitImg,
-	},
-	{
 		_id: 'skill-node',
 		name: 'NodeJS',
 		img: NodeJSImg,
+	},
+	{
+		_id: 'skill-js',
+		name: 'JavaScript',
+		img: JavaScriptImg,
+	},
+	{
+		_id: 'skill-html',
+		name: 'HTML',
+		img: HtmlImg,
+	},
+	{
+		_id: 'skill-css',
+		name: 'CSS',
+		img: CssImg,
+	},
+	{
+		_id: 'skill-git',
+		name: 'Git',
+		img: GitImg,
 	},
 	{
 		_id: 'skill-selenium',
@@ -120,7 +126,7 @@ export const Skills = () => {
 	return (
 		<Section title="Skills">
 			<Box display="flex" flexDirection="row" alignItems="center">
-				<Typography variant="body1" sx={{ my: 2 }}>
+				<Typography variant="body1" sx={{ mb: 2 }}>
 					Work
 				</Typography>
 			</Box>

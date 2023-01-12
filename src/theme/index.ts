@@ -1,5 +1,6 @@
 import { Theme as MaterialUITheme } from '@mui/material';
 import { createTheme, PaletteOptions } from '@mui/material/styles';
+import { TypographyOptions } from '@mui/material/styles/createTypography';
 import { dark, light } from './modes';
 
 // Re-declare the emotion theme to have the properties of the MaterialUiTheme
@@ -19,7 +20,7 @@ type PaletteOptionsType = {
 	dark: PaletteOptions;
 };
 
-const typography = {
+const typography: TypographyOptions = {
 	fontFamily: [
 		'-apple-system',
 		'BlinkMacSystemFont',
@@ -32,6 +33,12 @@ const typography = {
 		'"Segoe UI Emoji"',
 		'"Segoe UI Symbol"',
 	].join(','),
+	caption: {
+		fontWeight: 600,
+		fontSize: '12px',
+		lineHeight: '13px',
+		textTransform: 'uppercase',
+	},
 };
 
 const palette: PaletteOptionsType = { light, dark };

@@ -11,7 +11,7 @@ const ToggleThemeButton = () => {
 	};
 
 	return (
-		<Box>
+		<Box sx={{ display: 'inline-block' }}>
 			<IconButton
 				onClick={handleThemeToggle}
 				aria-label="toggle-theme"

@@ -31,6 +31,7 @@ export default Works;
 const WorkItem = ({ work }: { work: WorkType }) => (
 	<NextLink href={`/works/${work.path}`} passHref>
 		<a
+			// eslint-disable-next-line react/no-unknown-property
 			css={css`
 				text-decoration: none;
 				color: unset;
@@ -56,9 +57,7 @@ const WorkItem = ({ work }: { work: WorkType }) => (
 						alt={work.title}
 						width={350}
 						height={150}
-						css={css`
-							border-radius: 8px;
-						`}
+						objectFit="contain"
 					/>
 				</Box>
 				<Box display="flex" flexDirection="column">

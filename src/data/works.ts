@@ -20,7 +20,7 @@ const works: WorkType[] = [
 		website: 'https://scrivboard.com/',
 		stack: ['React', 'NestJS', 'MongoDB', 'TypeScript', 'CSS'],
 	},
-	/* {
+	{
 		path: 'viddl',
 		title: 'Viddl',
 		description:
@@ -29,18 +29,12 @@ const works: WorkType[] = [
 			'I was also involved in constructing the admin panel for managing parcels, including the ability to process CSV files, manage couriers, and manage individual parcels.' +
 			newLine +
 			'Furthermore, I assisted in the development of a courier mobile application using React Native, which includes a map view to display delivery addresses and integration with GPE and Ingenico POS terminals for handling payments.',
-		logo: '/works/hsup/main.png',
+		logo: '/works/viddl/mobile_map.png',
 		images: [
-			'/works/hsup/landing.jpg',
-			'/works/hsup/app_login.jpg',
-			'/works/hsup/app_dashboard.jpg',
-			'/works/hsup/app_lesson.jpg',
-			'/works/hsup/app_test.jpg',
-			'/works/hsup/app_teams.jpg',
-			'/works/hsup/app_projects.jpg',
-			'/works/hsup/mobile_dashboard.jpg',
-			'/works/hsup/mobile_lessons.jpg',
-			'/works/hsup/mobile_test.jpg',
+			'/works/viddl/main.jpg',
+			'/works/viddl/mobile_map.png',
+			'/works/viddl/mobile_screens.jpg',
+			'/works/viddl/app_tracking.jpg',
 		],
 		website: 'https://viddl.hu/',
 		stack: [
@@ -53,7 +47,7 @@ const works: WorkType[] = [
 			'TypeScript',
 			'CSS',
 		],
-	}, */
+	},
 	{
 		path: 'hsup',
 		title: 'Hungarian Startup University',

@@ -1,4 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+// https://github.com/vercel/community/discussions/124#discussioncomment-3939572
 import chromium from 'chrome-aws-lambda';
 import type { NextApiRequest, NextApiResponse } from 'next';
 

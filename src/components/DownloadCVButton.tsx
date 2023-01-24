@@ -1,21 +1,41 @@
 import SaveAltIcon from '@mui/icons-material/SaveAlt';
-import { Box, IconButton, Tooltip } from '@mui/material';
+import { Box, CircularProgress, IconButton, Tooltip } from '@mui/material';
 import React from 'react';
-import { setTimeout } from 'timers';
+
+function saveAsPdf(fileName: string, blob: ArrayBuffer) {
+	const link = document.createElement('a');
+	link.href = window.URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
+	link.download = fileName;
+	link.click();
+}
 
 const DownloadCVButton = () => {
 	const [showTooltip, setShowTooltip] = React.useState<boolean>(false);
+	const [pdfGenerateLoading, setPdfGenerateLoading] = React.useState<boolean>(false);
 
-	const handleClick = () => {
+	const handleClick = async () => {
 		setShowTooltip(false);
+		setPdfGenerateLoading(true);
 
-		setTimeout(() => {
-			// TODO: Add generate CV logic
-		}, 500);
+		try {
+			const response = await fetch('/api/generate-cv', { method: 'POST' });
+
+			if (!response.ok) {
+				throw new Error('Failed to generate PDF.');
+			}
+
+			const data = await response.arrayBuffer();
+
+			saveAsPdf('cv-adam-kadar.pdf', data);
+		} catch (err) {
+			console.error('Failed to save PDF.');
+		} finally {
+			setPdfGenerateLoading(false);
+		}
 	};
 
 	return (
-		<Box sx={{ display: { xs: 'none', md: 'inline-block' } }}>
+		<Box sx={{ position: 'relative', display: 'inline-block' }}>
 			<Tooltip
 				title="Download my CV"
 				open={showTooltip}
@@ -24,14 +44,26 @@ const DownloadCVButton = () => {
 				onMouseLeave={() => setShowTooltip(false)}
 			>
 				<IconButton
-					/* onClick={handleClick} */
-					href="/cv-adam-kadar.pdf"
+					onClick={handleClick}
+					disabled={pdfGenerateLoading}
 					aria-label="generate-pdf"
 					sx={{ color: 'white' }}
 				>
 					<SaveAltIcon sx={{ fontSize: 20 }} />
 				</IconButton>
 			</Tooltip>
+			{pdfGenerateLoading && (
+				<CircularProgress
+					color="secondary"
+					size={24}
+					sx={{
+						position: 'absolute',
+						top: 8,
+						left: 6,
+						zIndex: 1,
+					}}
+				/>
+			)}
 		</Box>
 	);
 };

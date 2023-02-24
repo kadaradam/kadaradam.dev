@@ -16,6 +16,7 @@
     "@mui/icons-material": "^5.8.4",
     "@mui/lab": "^5.0.0-alpha.92",
     "@mui/material": "^5.9.1",
+    "@vercel/analytics": "^0.1.10",
     "moment": "^2.29.4",
     "next": "12.2.3",
     "react": "18.2.0",

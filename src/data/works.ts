@@ -4,6 +4,25 @@ const newLine = ' \n \n&nbsp;\n \n';
 
 const works: WorkType[] = [
 	{
+		path: 'xtendr',
+		title: 'Xtendr App',
+		description:
+			'I was entrusted with a task to fully develop the frontend side of a privacy-enhancing data collaboration single page application. As the backend had already been created with Strapi, my task was to work with the endpoints that were already available. The app allows you to create new projects, assign users to projects, and set their roles. You can upload CSV files and create queries for the uploaded data. ' +
+			'\n&nbsp;\n&nbsp;Involved technologies: Vite, React Query, Material UI' +
+			'\n&nbsp;\n&nbsp;My main tasks included communicating with clients, planning the frontend, and developing the application.',
+		logo: '/works/xtendr/app_project_users.jpg',
+		images: [
+			'/works/xtendr/app_login.jpg',
+			'/works/xtendr/app_user_settings.jpg',
+			'/works/xtendr/app_project_users.jpg',
+			'/works/xtendr/app_datasets.jpg',
+			'/works/xtendr/app_upload_csv.jpg',
+			'/works/xtendr/app_run_session.jpg',
+			'/works/xtendr/app_build_query.jpg',
+		],
+		stack: ['React', 'TypeScript', 'CSS'],
+	},
+	{
 		path: 'scrivboard',
 		title: 'Scrivboard',
 		description:

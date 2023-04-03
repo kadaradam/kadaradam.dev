@@ -10,7 +10,7 @@ const works: WorkType[] = [
 			'I was entrusted with a task to fully develop the frontend side of a privacy-enhancing data collaboration single page application. As the backend had already been created with Strapi, my task was to work with the endpoints that were already available. The app allows you to create new projects, assign users to projects, and set their roles. You can upload CSV files and create queries for the uploaded data. ' +
 			'\n&nbsp;\n&nbsp;Involved technologies: Vite, React Query, Material UI' +
 			'\n&nbsp;\n&nbsp;My main tasks included communicating with clients, planning the frontend, and developing the application.',
-		logo: '/works/xtendr/app_project_users.jpg',
+		logo: '/works/xtendr/logo.png',
 		images: [
 			'/works/xtendr/app_login.jpg',
 			'/works/xtendr/app_user_settings.jpg',
@@ -28,7 +28,7 @@ const works: WorkType[] = [
 		description:
 			'A writer reached out to me looking for a drag and drop software that allows for visualizing stories on movable cards and exporting them in "docx" format. They requested for the application to be a paid service, so I incorporated a monthly/yearly subscription model using Stripe. I also brought on a UX Designer to handle the design.' +
 			'\n&nbsp;\n&nbsp;My main tasks included communicating with clients, grasping client and business requirements, planning the architecture, and developing the application.',
-		logo: '/works/scrivboard/app_login.jpg',
+		logo: '/works/scrivboard/logo.png',
 		images: [
 			'/works/scrivboard/app_login.jpg',
 			'/works/scrivboard/app_dashboard.jpg',

@@ -7,7 +7,7 @@ const EXPERIENCE_LIST: ExperienceType[] = [
 	{
 		_id: 'exp-0',
 		companyName: 'Hobbie Project',
-		role: 'GTA:SAMP Server',
+		role: '',
 		description:
 			'**GTA SA:MP**: Created an online GTA San Andreas Multiplayer **game server** where players can connect and play with each other. Added **Control panel** on the web, to let users manage their in-game account. **Learnt the basics of programming.**',
 		startDate: new Date(2011, 3 - 1),
@@ -59,8 +59,8 @@ const EXPERIENCE_LIST: ExperienceType[] = [
 		role: 'FREELANCER',
 		description:
 			'Freelancer, specialised in **web and mobile application development**. My main responsibilities are: **communicating with clients, architecture planning, building the application**.',
-		startDate: new Date(2021, 12 - 1),
-		endDate: undefined,
+		startDate: new Date(2022, 12 - 1),
+		endDate: new Date(2023, 4 - 1),
 		tags: [
 			'React',
 			'Next.js',
@@ -71,6 +71,26 @@ const EXPERIENCE_LIST: ExperienceType[] = [
 			'MongoDB',
 			'TypeScript',
 		],
+	},
+	{
+		_id: 'exp-6',
+		companyName: 'Digital Thinkers',
+		role: 'FULL STACK DEVELOPER',
+		description:
+			'I learned **PHP** and set up an **API based on Laravel framework** for a **Danish business management tool** that helps develop **sustainable strategies**. I was responsible for the **frontend development**, communicated with the **client**, and was in charge of performing a successful **data migration**. I also participated in the development of an API for a **Danish educational platform** focusing on **user registration** and **course payments**, which was integrated with **CMS** and **CRM features**.',
+		startDate: new Date(2023, 5 - 1),
+		endDate: new Date(2024, 4 - 1),
+		tags: ['Laravel', 'React', 'Next.js', 'NestJS', 'Express', 'PostgreSQL', 'TypeScript'],
+	},
+	{
+		_id: 'exp-6',
+		companyName: 'Betsson Group',
+		role: 'FRONTEND DEVELOPER',
+		description:
+			"I'm currently contributing to the development of multiple Betsson brand frontend websites across the world using Angular and StencilJS.",
+		startDate: new Date(2024, 5 - 1),
+		endDate: undefined,
+		tags: ['Angular', 'RxJS', 'TypeScript'],
 	},
 ];
 

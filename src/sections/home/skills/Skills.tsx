@@ -6,6 +6,7 @@ import GatsbyImg from 'public/skills/gatsby.png';
 import GitImg from 'public/skills/git.png';
 import HtmlImg from 'public/skills/html.png';
 import JavaScriptImg from 'public/skills/js.png';
+import LaravelImg from 'public/skills/laravel.png';
 import MongoDBImg from 'public/skills/mongo.png';
 import NestJSImg from 'public/skills/nestjs.png';
 import NextJs from 'public/skills/nextjs.png';
@@ -35,6 +36,11 @@ const SKILL_LIST: SkillType[] = [
 		_id: 'skill-nextjs',
 		name: 'Next.js',
 		img: NextJs,
+	},
+	{
+		_id: 'skill-laravel',
+		name: 'Laravel',
+		img: LaravelImg,
 	},
 	{
 		_id: 'skill-reactnative',

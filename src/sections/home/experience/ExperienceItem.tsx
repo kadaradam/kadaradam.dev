@@ -1,6 +1,6 @@
 /* eslint-disable react/no-children-prop */
 import ExperienceTags from '@components/ExperienceTags';
-import { Box, Card as MuiCard, CardContent, Typography } from '@mui/material';
+import { Box, CardContent, Chip, Card as MuiCard, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 import moment from 'moment';
 import Markdown from 'react-markdown';
@@ -32,6 +32,14 @@ const ExperienceItem = ({ item }: ExperienceItemProps) => {
 				</Typography>
 				{/* Bottom tags */}
 				<Box sx={{ marginTop: 'auto' }}>
+					{item.role ? (
+						<Chip
+							label={item.role}
+							variant="outlined"
+							size="small"
+							sx={{ marginTop: 1, marginRight: 1 }}
+						/>
+					) : null}
 					<ExperienceTags tags={item.tags} />
 				</Box>
 			</CardContent>

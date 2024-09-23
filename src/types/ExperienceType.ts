@@ -12,7 +12,11 @@ export type ExperienceTagsType =
 	| 'NestJS'
 	| 'React Native'
 	| 'Next.js'
-	| 'Gatsby';
+	| 'Gatsby'
+	| 'Laravel'
+	| 'PostgreSQL'
+	| 'Angular'
+	| 'RxJS';
 
 export type ExperienceType = {
 	_id: string;

@@ -16,6 +16,10 @@ const tagColors: { [key in ExperienceTagsType]: string } = {
 	NestJS: '#ea2845',
 	'Next.js': '#0070f3',
 	Gatsby: '#7026b9',
+	Laravel: '#FF2D20',
+	PostgreSQL: '#336791',
+	Angular: '#DD0031',
+	RxJS: '#B7178C',
 };
 
 type ExperienceTagsProps = {
@@ -28,7 +32,7 @@ const ExperienceTags = ({ tags }: ExperienceTagsProps) => (
 			<Chip
 				label={tagName}
 				key={tagName}
-				avatar={<Avatar sx={{ bgcolor: tagColors[tagName] }}>{''}</Avatar>}
+				avatar={<Avatar sx={{ bgcolor: tagColors[tagName] }}>&nbsp;</Avatar>}
 				variant="outlined"
 				size="small"
 				sx={{ marginTop: 1, marginRight: 1 }}

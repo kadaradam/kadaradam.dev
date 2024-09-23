@@ -7,7 +7,7 @@ const EXPERIENCE_LIST: ExperienceType[] = [
 	{
 		_id: 'exp-0',
 		companyName: 'Hobbie Project',
-		role: 'GTA:SAMP Server',
+		role: '',
 		description:
 			'**GTA SA:MP**: Created an online GTA San Andreas Multiplayer **game server** where players can connect and play with each other. Added **Control panel** on the web, to let users manage their in-game account. **Learnt the basics of programming.**',
 		startDate: new Date(2011, 3 - 1),

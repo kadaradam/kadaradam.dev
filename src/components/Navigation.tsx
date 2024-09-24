@@ -2,7 +2,6 @@ import LanguageIcon from '@mui/icons-material/LanguageOutlined';
 import ModelTrainingIcon from '@mui/icons-material/ModelTrainingOutlined';
 import NaturePeopleIcon from '@mui/icons-material/NaturePeopleOutlined';
 import PsychologyIcon from '@mui/icons-material/PsychologyOutlined';
-import SchoolIcon from '@mui/icons-material/SchoolOutlined';
 import { Box, Container, Grid, Tab, Tabs } from '@mui/material';
 import { useState } from 'react';
 
@@ -48,12 +47,12 @@ const Navigation = () => {
 								icon={<ModelTrainingIcon />}
 								iconPosition="start"
 							/>
-							<Tab
+							{/* <Tab
 								value="education"
 								label="Education"
 								icon={<SchoolIcon />}
 								iconPosition="start"
-							/>
+							/> */}
 							<Tab
 								value="skills"
 								label="Skills"

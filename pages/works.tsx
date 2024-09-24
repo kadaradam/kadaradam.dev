@@ -19,7 +19,7 @@ const Works = ({ works }: InferGetStaticPropsType<typeof getStaticProps>) => (
 		</Typography>
 		<Grid container spacing={12}>
 			{works.map((work) => (
-				<Grid item xs={4} key={work.path}>
+				<Grid item xs={12} sm={4} key={work.path}>
 					<WorkItem work={work} />
 				</Grid>
 			))}
@@ -47,11 +47,7 @@ const WorkItem = ({ work }: { work: WorkType }) => (
 					}
 				`}
 			>
-				<Box
-					display={{ xs: 'none', sm: 'flex' }}
-					justifyContent="center"
-					alignItems="center"
-				>
+				<Box display="flex" justifyContent="center" alignItems="center">
 					<Image
 						src={work.logo}
 						alt={work.title}

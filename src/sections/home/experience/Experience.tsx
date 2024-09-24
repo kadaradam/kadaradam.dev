@@ -58,7 +58,7 @@ const EXPERIENCE_LIST: ExperienceType[] = [
 		companyName: 'Freelance Software Engineer',
 		role: 'FREELANCER',
 		description:
-			'Freelancer, specialised in **web and mobile application development**. My main responsibilities are: **communicating with clients, architecture planning, building the application**.',
+			'Freelancer, specialised in **web and mobile application development**. My main responsibilities were: **communicating with clients, architecture planning, building the application**.',
 		startDate: new Date(2022, 12 - 1),
 		endDate: new Date(2023, 4 - 1),
 		tags: [

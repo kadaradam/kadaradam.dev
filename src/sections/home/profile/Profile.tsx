@@ -21,7 +21,7 @@ const profileProps = {
 	linkedin_url: 'https://www.linkedin.com/in/kadaradam/',
 	contact_email: 'contact@kadaradam.dev',
 	birth_day: '12 November 1996',
-	company: 'ViddL',
+	company: 'Betsson Group',
 	location: 'Hungary, Budapest',
 	blog: 'https://kadaradam.dev/',
 	linkedin_username: 'kadaradam',

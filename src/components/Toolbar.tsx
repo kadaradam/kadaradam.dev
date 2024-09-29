@@ -22,7 +22,7 @@ const Toolbar = () => {
 					>
 						<Box>
 							<NextLink href="/" passHref>
-								<NavLink>Adam Kadar</NavLink>
+								<NavLink>Me</NavLink>
 							</NextLink>
 							<NextLink href="/works" passHref>
 								<NavLink>Works</NavLink>
